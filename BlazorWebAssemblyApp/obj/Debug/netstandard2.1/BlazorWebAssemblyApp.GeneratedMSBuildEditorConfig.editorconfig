@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = BlazorWebAssemblyApp
+build_property.ProjectDir = D:\DemoApp\BlazorWebAssemblyApp\

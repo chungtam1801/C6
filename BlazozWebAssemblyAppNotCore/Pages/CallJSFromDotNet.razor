@@ -1,0 +1,41 @@
+﻿@page "/jsindotnet"
+
+<h2>Net call JS</h2>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <h4>
+            Examples for calling a JS function returning void:
+        </h4>
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-info" @onclick="ShowAlertWindow">Show Alert Window</button>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h4>
+            Examples for calling a JS function returning result:
+        </h4>
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-info" @onclick="RegisterEmail">Register Email</button>
+    </div>
+    <div class="col-md-4">
+        @_registrationResult
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h4>
+            Examples for calling a JS function returning object:
+        </h4>
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-info" @onclick="ExtractEmailInfo">Extract EmailInfo</button>
+    </div>
+    <div class="col-md-4">
+        @_detailMessage
+    </div>
+</div>

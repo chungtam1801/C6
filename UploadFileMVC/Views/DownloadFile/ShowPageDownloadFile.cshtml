@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UploadFileMVC.Models.FileModel>
+
+@{
+    ViewData["Title"] = "ListFile";
+}
+
+<h1>ListFile</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FileName)
+            </td>
+            <td>
+                    @Html.ActionLink("Download", "DownloadFile", new { fileName = item.FileName}) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

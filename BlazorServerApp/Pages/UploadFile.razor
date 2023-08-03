@@ -1,0 +1,36 @@
+﻿@page "/uploadfile"
+@using System.IO;
+@using Microsoft.AspNetCore.Hosting
+@inject IWebHostEnvironment _env
+
+<h3>UploadFilePage</h3>
+
+<div>
+    <div class="inputArea">
+        <InputFile id="inputDefault" OnChange="OnInputFileChange" accept="image/png,image/gif,image/jpeg"/>
+        <div class="dropArea @dropClass">
+            Drag and drop your file
+            <InputFile id="inputDrop" OnChange="OnInputFileChange" @ondragenter="HandleDragEnter" @ondragleave="HandleDragLeave" multiple/>
+        </div>
+        @if(files != null && files.Count>1)
+        {
+            <div>
+                <ul>
+                    @foreach(var file in files)
+                    {
+                        <li>@file.Name</li>
+                    }
+                </ul>
+            </div>
+        }
+        @if (urls.Count > 0)
+        {
+            foreach(var url in urls)
+            {
+                <br />
+                <a href="@url" download>@url</a>
+            }
+        }
+    </div>
+</div>
+

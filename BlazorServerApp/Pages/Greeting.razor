@@ -1,0 +1,15 @@
+﻿@page "/greeting"
+@inherits GreetingCode
+
+<h3> Hello Blazor Server Demo</h3>
+<div class="form-group">
+    <input type="text" placeholder="your name" @bind="name" class="form-control"/>
+</div>
+<div class="form-group">
+    <input type="text" placeholder="your address" @bind="address" class="form-control"/>
+</div>
+<div class="form-group">
+    <button @onclick="Welcome" class="btn btn-primary">Welcome</button>
+</div>
+<h3>@greeting</h3>
+
